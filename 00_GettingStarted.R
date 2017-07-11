@@ -74,7 +74,9 @@ master = lapply(filenames, read_Licor)
 
 ###############
 # you can do this with your own data .... you just need to point R to those data and load em up into a big list
-###############
+# my_data <- "path_to_your_data" # for example: "~/Downloads/FluxCourse_2017_ACi_Curves/07102017PSC0365_CO2response"
+# master = lapply(my_data, read_Licor)
+# ###############
 
 
 # The code below performs a set of interactive QA/QC checks on the LI-COR data that's been loaded. 
