@@ -7,8 +7,16 @@
 #install them
 install.packages("devtools")
 install.packages("rjags")
+
+
 #load the packages
 library(devtools)
+
+
+#note you need rjags installed in R and also JAGS (stand alone application) installed on your computer
+#note you will also need Rtools installed.
+
+#note you will get an error 
 library(rjags)
 
 # #Next Install PEcAN.photosynthesis ... this is not available through CRAN 
@@ -59,6 +67,7 @@ library(grid) #required for 'unit'
 # the command system.file() in R allows you to call up folders relevant to a particular package
 # This commant looks in the folder, scans for files with aci or aq in the filename and writes these names (and their full path) to the R object "filenames"
 ## Get list of LI-COR 6400 file names (ASCII not xls)
+
 filenames <- system.file("extdata", paste0("flux-course-",rep(1:6,each=2),c("aci","aq")), package = "PEcAn.photosynthesis")
 
 #filenames is 12 character variables
