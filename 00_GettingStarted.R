@@ -70,11 +70,13 @@ filenames <- system.file("extdata", paste0("flux-course-",rep(1:6,each=2),c("aci
 
 #read.Licor will load an individual licor file ... if you have one. 
 ## Load files to a list
-master = lapply(filenames, read.Licor)
+master = lapply(filenames, read_Licor)
 
 ###############
 # you can do this with your own data .... you just need to point R to those data and load em up into a big list
-###############
+# my_data <- "path_to_your_data" # for example: "~/Downloads/FluxCourse_2017_ACi_Curves/07102017PSC0365_CO2response"
+# master = lapply(my_data, read_Licor)
+# ###############
 
 
 # The code below performs a set of interactive QA/QC checks on the LI-COR data that's been loaded. 
@@ -83,5 +85,5 @@ master = lapply(filenames, read.Licor)
 # If you want to get a feel for how the code works you'll want to run it first on just one file, 
 # rather than looping over all the files
 
-master[[1]] <- Licor.QC(master[[1]])
+master[[1]] <- Licor_QC(master[[1]])
 
