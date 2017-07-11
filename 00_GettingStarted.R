@@ -75,9 +75,9 @@ filenames <- system.file("extdata", paste0("flux-course-",rep(1:6,each=2),c("aci
 #These files are licor files ... not CSV files, not XLSX files 
 #... just the file that comes right off the machine ... it has no file extension
 
-# PEcAN.photosynthesis contains a command call read.licor() ...I bet you can guess what it does!
+# PEcAN.photosynthesis contains a command call read_Licor() ...I bet you can guess what it does!
 
-#read.Licor will load an individual licor file ... if you have one. 
+#read_Licor will load an individual licor file ... if you have one. 
 ## Load files to a list
 master = lapply(filenames, read_Licor)
 
